@@ -470,7 +470,7 @@ body {
 	width: 70%;
 	top: 56px;
 	@include background-image(linear-gradient(right, rgba(249,245,159,1) 0% ,rgba(249,245,159,0) 100%));
-	@include transform(perspective(529px) rotateX(180deg) rotateY(-120deg) rotate(0deg) skew(1deg));
+	@include transform(perspective(529px) rotateX(180deg) rotateY(-120deg) rotate(0deg) skew(45deg));
 }
 
 .glow-shine-container {
@@ -884,3 +884,34 @@ body {
 		height: 12vh;
 	}
 }
+
+
+.scroll-box-container {
+  position: absolute;
+  top: 10vh;
+  right: 15vw;
+  width: 25vw;
+  height: 60vh;
+  overflow: hidden;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+.scroll-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  background: rgba(20, 25, 18, 0.3);
+  color: #fff;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  scroll-behavior: auto;
+  will-change: scroll-position;
+}
+.scroll-content p {
+  margin: 0 0 1rem 0;
+}
+
